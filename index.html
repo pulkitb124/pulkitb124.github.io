@@ -3,322 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pulkit Bhasin | Software Engineer</title>
-    <style>
-      :root {
-        --bg: #09090b;
-        --surface: #111827;
-        --surface-alt: #1f2937;
-        --text: #f8fafc;
-        --text-muted: #cbd5e1;
-        --border: rgba(148, 163, 184, 0.22);
-        --accent: #a78bfa;
-        --accent-2: #22d3ee;
-        --shadow: 0 18px 40px rgba(3, 7, 18, 0.35);
-      }
-
-      * {
-        box-sizing: border-box;
-      }
-
-      html {
-        scroll-behavior: smooth;
-      }
-
-      body {
-        margin: 0;
-        font-family: "Inter", "Segoe UI", Roboto, sans-serif;
-        background: radial-gradient(circle at 20% 0%, #1f1b3a 0%, #09090b 45%),
-          #09090b;
-        color: var(--text);
-        line-height: 1.6;
-      }
-
-      a {
-        color: var(--accent-2);
-      }
-
-      .page {
-        width: min(1080px, 92vw);
-        margin: 0 auto 4rem;
-      }
-
-      .top-nav {
-        position: sticky;
-        top: 0;
-        z-index: 10;
-        display: flex;
-        justify-content: center;
-        padding: 1rem 0;
-        backdrop-filter: blur(12px);
-      }
-
-      .top-nav ul {
-        list-style: none;
-        margin: 0;
-        padding: 0.55rem 1rem;
-        display: flex;
-        gap: 0.95rem;
-        border: 1px solid var(--border);
-        border-radius: 999px;
-        background: rgba(17, 24, 39, 0.75);
-        box-shadow: var(--shadow);
-      }
-
-      .top-nav a {
-        text-decoration: none;
-        color: var(--text-muted);
-        font-size: 0.9rem;
-      }
-
-      .top-nav a:hover {
-        color: var(--text);
-      }
-
-      .hero {
-        padding: 5.5rem 0 3rem;
-        display: grid;
-        grid-template-columns: 1.35fr 1fr;
-        gap: 2rem;
-        align-items: center;
-      }
-
-      .badge {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.45rem;
-        background: rgba(34, 211, 238, 0.12);
-        color: #a5f3fc;
-        border: 1px solid rgba(103, 232, 249, 0.25);
-        border-radius: 999px;
-        padding: 0.35rem 0.75rem;
-        font-size: 0.8rem;
-      }
-
-      h1 {
-        margin: 1rem 0 0.8rem;
-        line-height: 1.1;
-        font-size: clamp(2.1rem, 4vw, 3.4rem);
-        letter-spacing: -0.03em;
-      }
-
-      .hero p {
-        color: var(--text-muted);
-        font-size: 1.05rem;
-        max-width: 60ch;
-      }
-
-      .hero-actions {
-        margin-top: 1.4rem;
-        display: flex;
-        gap: 0.85rem;
-        flex-wrap: wrap;
-      }
-
-      .button {
-        display: inline-block;
-        border-radius: 0.8rem;
-        text-decoration: none;
-        font-weight: 600;
-        padding: 0.65rem 1rem;
-        border: 1px solid transparent;
-      }
-
-      .button.primary {
-        color: #0f172a;
-        background: linear-gradient(120deg, var(--accent), #67e8f9);
-      }
-
-      .button.ghost {
-        color: var(--text);
-        border-color: var(--border);
-        background: rgba(17, 24, 39, 0.7);
-      }
-
-      .hero-card,
-      section {
-        border: 1px solid var(--border);
-        background: linear-gradient(
-          150deg,
-          rgba(17, 24, 39, 0.98),
-          rgba(15, 23, 42, 0.92)
-        );
-        border-radius: 1rem;
-        box-shadow: var(--shadow);
-      }
-
-      .hero-card {
-        padding: 1.2rem;
-      }
-
-      .hero-card h3 {
-        margin: 0;
-        font-size: 1rem;
-      }
-
-      .hero-card ul {
-        margin: 0.9rem 0 0;
-        padding-left: 1rem;
-        color: var(--text-muted);
-      }
-
-      section {
-        margin-top: 1.15rem;
-        padding: 1.2rem;
-      }
-
-      section h2 {
-        margin: 0 0 0.5rem;
-        font-size: 1.35rem;
-        letter-spacing: -0.02em;
-      }
-
-      section p {
-        margin: 0 0 0.9rem;
-        color: var(--text-muted);
-      }
-
-      .resume-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 1rem;
-      }
-
-      .panel {
-        background: rgba(17, 24, 39, 0.8);
-        border: 1px solid rgba(148, 163, 184, 0.2);
-        border-radius: 0.9rem;
-        padding: 0.95rem;
-      }
-
-      .panel h3 {
-        margin: 0;
-        font-size: 1rem;
-      }
-
-      .timeline {
-        margin: 0.75rem 0 0;
-        padding: 0;
-        list-style: none;
-      }
-
-      .timeline li + li {
-        margin-top: 0.8rem;
-      }
-
-      .timeline strong {
-        display: block;
-        font-size: 0.95rem;
-      }
-
-      .muted {
-        color: var(--text-muted);
-        font-size: 0.92rem;
-      }
-
-      .chips {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.5rem;
-        margin-top: 0.8rem;
-      }
-
-      .chip {
-        border: 1px solid rgba(148, 163, 184, 0.3);
-        background: rgba(15, 23, 42, 0.8);
-        border-radius: 999px;
-        padding: 0.28rem 0.62rem;
-        font-size: 0.83rem;
-        color: #dbeafe;
-      }
-
-      .projects {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 1rem;
-      }
-
-      .project-card {
-        background: rgba(17, 24, 39, 0.8);
-        border: 1px solid rgba(148, 163, 184, 0.2);
-        border-radius: 0.9rem;
-        padding: 0.9rem;
-      }
-
-      .project-card h3 {
-        margin: 0 0 0.45rem;
-      }
-
-      .project-card video {
-        width: 100%;
-        min-height: 165px;
-        border-radius: 0.7rem;
-        background: linear-gradient(135deg, #1f2937, #0f172a);
-        border: 1px solid rgba(148, 163, 184, 0.25);
-      }
-
-      .links {
-        display: flex;
-        gap: 0.8rem;
-        margin-top: 0.75rem;
-        flex-wrap: wrap;
-      }
-
-      .links a {
-        font-size: 0.9rem;
-      }
-
-      .blog-list {
-        display: grid;
-        gap: 0.75rem;
-        margin-top: 0.8rem;
-      }
-
-      .blog-item {
-        border: 1px solid rgba(148, 163, 184, 0.25);
-        border-radius: 0.75rem;
-        background: rgba(15, 23, 42, 0.8);
-        padding: 0.8rem;
-      }
-
-      .blog-item h3 {
-        margin: 0;
-        font-size: 1rem;
-      }
-
-      .blog-item p {
-        margin: 0.25rem 0 0;
-      }
-
-      footer {
-        margin-top: 1.3rem;
-        color: var(--text-muted);
-        text-align: center;
-        font-size: 0.9rem;
-      }
-
-      @media (max-width: 900px) {
-        .hero,
-        .resume-grid,
-        .projects {
-          grid-template-columns: 1fr;
-        }
-      }
-    </style>
+    <title>Pulkit Bhasin | Home</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <nav class="top-nav">
       <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#resume">Resume</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#blog">Blog</a></li>
-        <li><a href="#trajectory">Trajectory</a></li>
+        <li><a class="active" href="index.html">Home</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="blog.html">Blog</a></li>
       </ul>
     </nav>
 
     <div class="page">
-      <header id="home" class="hero">
+      <header class="hero">
         <div>
           <span class="badge">Software Engineer • AI Builder</span>
           <h1>Hi, I am Pulkit. I build practical software with taste.</h1>
@@ -328,8 +27,8 @@
             I am learning each week, and how I think about technical work.
           </p>
           <div class="hero-actions">
-            <a class="button primary" href="#projects">See Projects</a>
-            <a class="button ghost" href="#blog">Read Weekly Blog</a>
+            <a class="button primary" href="projects.html">See Projects</a>
+            <a class="button ghost" href="blog.html">Read Weekly Blog</a>
           </div>
         </div>
 
@@ -343,122 +42,39 @@
         </aside>
       </header>
 
-      <section id="resume">
-        <h2>Resume</h2>
+      <section>
+        <h2>Explore the Site</h2>
         <p>
-          Aesthetic snapshot view. Replace placeholders with your exact work
-          history, education, and metrics.
+          Each area now has its own page so it is easier to browse and less
+          cluttered.
         </p>
-        <div class="resume-grid">
+        <div class="cards-grid">
           <article class="panel">
-            <h3>Experience</h3>
-            <ul class="timeline">
-              <li>
-                <strong>Software Engineer • Company Name</strong>
-                <span class="muted">2024 - Present • City, Country</span>
-                <div class="muted">
-                  Led product features across frontend + backend, improving
-                  reliability and user outcomes.
-                </div>
-              </li>
-              <li>
-                <strong>Software Engineer Intern • Company Name</strong>
-                <span class="muted">2023 • City, Country</span>
-                <div class="muted">
-                  Built an internal tool that reduced manual workflow steps.
-                </div>
-              </li>
-            </ul>
+            <h3>Resume</h3>
+            <p class="muted">
+              Experience, skills, and education in an aesthetic layout.
+            </p>
+            <p><a href="resume.html">Open resume page</a></p>
           </article>
-
           <article class="panel">
-            <h3>Skills</h3>
-            <div class="chips">
-              <span class="chip">TypeScript</span>
-              <span class="chip">Python</span>
-              <span class="chip">React</span>
-              <span class="chip">Node.js</span>
-              <span class="chip">LLM Apps</span>
-              <span class="chip">SQL</span>
-              <span class="chip">AWS</span>
-              <span class="chip">System Design</span>
-            </div>
-            <h3 style="margin-top: 1rem">Education</h3>
-            <p class="muted" style="margin-bottom: 0">
-              B.S. in Computer Science • University Name
+            <h3>Projects</h3>
+            <p class="muted">
+              Project cards with demos, technical docs, and repository links.
             </p>
+            <p><a href="projects.html">Open projects page</a></p>
+          </article>
+          <article class="panel">
+            <h3>Blog</h3>
+            <p class="muted">
+              Weekly writing archive for paper analyses and interdisciplinary AI
+              explorations.
+            </p>
+            <p><a href="blog.html">Open blog page</a></p>
           </article>
         </div>
       </section>
 
-      <section id="projects">
-        <h2>Projects</h2>
-        <p>
-          Each project card includes a demo video, a deeper write-up, and a
-          repository link. Add demos under <code>assets/videos/</code>.
-        </p>
-        <div class="projects">
-          <article class="project-card">
-            <h3>Project One: AI Workflow Assistant</h3>
-            <video controls preload="metadata">
-              <source src="assets/videos/project-one-demo.mp4" type="video/mp4" />
-              Your browser does not support video playback.
-            </video>
-            <p class="muted">
-              AI assistant that automates repetitive workflows and provides
-              explainable outputs.
-            </p>
-            <div class="links">
-              <a href="#">Project doc</a>
-              <a href="#">GitHub repo</a>
-              <a href="#">Live demo</a>
-            </div>
-          </article>
-
-          <article class="project-card">
-            <h3>Project Two: Research Insight Engine</h3>
-            <video controls preload="metadata">
-              <source src="assets/videos/project-two-demo.mp4" type="video/mp4" />
-              Your browser does not support video playback.
-            </video>
-            <p class="muted">
-              Tool for summarizing and comparing papers to speed up technical
-              insight generation.
-            </p>
-            <div class="links">
-              <a href="#">Project doc</a>
-              <a href="#">GitHub repo</a>
-              <a href="#">Live demo</a>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section id="blog">
-        <h2>Weekly Blog</h2>
-        <p>
-          Goal: publish one post per week. Themes include paper breakdowns and
-          interdisciplinary AI ideas.
-        </p>
-        <div class="blog-list">
-          <article class="blog-item">
-            <h3>Template: Paper Deep Dive #01</h3>
-            <p class="muted">
-              Problem, method, key results, critique, and "what I would build
-              next."
-            </p>
-          </article>
-          <article class="blog-item">
-            <h3>Template: AI x Interdisciplinary Notes #01</h3>
-            <p class="muted">
-              Exploring AI interfaces with domains like healthcare, education,
-              policy, or creativity.
-            </p>
-          </article>
-        </div>
-      </section>
-
-      <section id="trajectory">
+      <section>
         <h2>Trajectory (toward South Park Commons)</h2>
         <p>
           This section signals long-term founder and research taste. Keep it
